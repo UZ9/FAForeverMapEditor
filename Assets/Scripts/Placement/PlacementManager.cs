@@ -249,9 +249,6 @@ public class PlacementManager : MonoBehaviour {
 		GL.Begin(GL.LINES);
 		GL.Color(BorderColor);
 
-		// when we're currently attempting to build units, we need to
-		// - draw border grid around the preview placement object
-		// - draw border around any nearby buildings within some radius threshold
 		DrawPlacementPreviewBorders(PlacementObject.transform);
 
 		for (int i = 0; i < PlacementSymmetry.Length; i++)
