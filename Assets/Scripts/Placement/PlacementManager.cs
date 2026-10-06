@@ -34,8 +34,8 @@ public class PlacementManager : MonoBehaviour {
 
 	private static readonly Color BorderColor = new(0f, 0.475f, 1f);
 	private static readonly Collider[] NearbyColliders = new Collider[128];
-	const float NearbyDistanceThreshold = 1f;
-	GetGamedataFile.UnitBluePrint PreviewUnitBP;
+	private const float NearbyDistanceThreshold = 1f;
+	private GetGamedataFile.UnitBluePrint PreviewUnitBP;
 
 	static bool _SnapToWater = false;
 	public static bool SnapToWater
