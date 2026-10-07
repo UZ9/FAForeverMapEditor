@@ -46,6 +46,25 @@ namespace EditMap
 			ResourceBrowser.ClearDrag();
 		}
 
+		public void SelectBrowserUnit()
+		{
+			OnDropUnit();
+
+			if (!isActiveAndEnabled)
+			{
+				return;
+			}
+
+			if (Creating)
+			{
+				OnClickCreate(true);
+			}
+			else
+			{
+				SwitchCreate();
+			}
+		}
+
 		public void DestroyUnits(List<GameObject> MarkerObjects, bool RegisterUndo = true)
 		{
 			RemoveUnits(MarkerObjects, RegisterUndo);
